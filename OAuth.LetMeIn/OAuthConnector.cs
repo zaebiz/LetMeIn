@@ -54,9 +54,8 @@ namespace OAuth.LetMeIn
                 Code = authCode
             };
 
-            var client = new RestClient(_settings.ProviderUrl);
-
-            var request = new RestRequest(_settings.GetTokenMethod);
+            var client = new RestClient(_provider.ProviderUrl);
+            var request = new RestRequest(_provider.GetTokenMethod);
         }
     }
 }
